@@ -1,6 +1,6 @@
 # DAppNodePackage Lodestar Holesky
 
-**Lodestar Goerli/Holesky Ethereum Consensus Layer Client**
+**Lodestar Holesky Ethereum Consensus Layer Client**
 
 Typescript Ethereum Consensus Layer Implementation by ChainSafe
 
