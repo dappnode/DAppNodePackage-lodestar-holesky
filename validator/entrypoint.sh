@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # MEV-Boost: https://chainsafe.github.io/lodestar/usage/mev-integration/
-if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" == "true" ]; then
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" == "true" ]; then
     echo "MEV-Boost is enabled"
     EXTRA_OPTS="--builder ${EXTRA_OPTS}"
 fi

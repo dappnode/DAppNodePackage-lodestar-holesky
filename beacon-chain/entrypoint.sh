@@ -3,7 +3,7 @@
 # Concatenate EXTRA_OPTS string
 [[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
 
-case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER in
+case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
 "goerli-geth.dnp.dappnode.eth")
     HTTP_ENGINE="http://goerli-geth.dappnode:8551"
     ;;
@@ -17,20 +17,20 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER in
     HTTP_ENGINE="http://goerli-erigon.dappnode:8551"
     ;;
 *)
-    echo "Unknown value for _DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER: $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER"
-    HTTP_ENGINE=$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER
+    echo "Unknown value for _DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY: $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY"
+    HTTP_ENGINE=$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY
     ;;
 esac
 
 # MEV-Boost: https://chainsafe.github.io/lodestar/usage/mev-integration/
-if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" == "true" ]; then
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" == "true" ]; then
     echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost-goerli.dappnode:18550"
     if curl --retry 5 --retry-delay 5 --retry-all-errors "${MEVBOOST_URL}"; then
         EXTRA_OPTS="--builder --builder.urls=${MEVBOOST_URL} ${EXTRA_OPTS}"
     else
-        echo "MEV-Boost is enabled but the Prater MEV-Boost package at ${MEVBOOST_URL} is not reachable"
-        curl -X POST -G 'http://my.dappnode/notification-send' --data-urlencode 'type=danger' --data-urlencode title="${MEVBOOST_URL} can not be reached" --data-urlencode 'body=Make sure the Prater MEV-Boost DNP is available and running'
+        echo "MEV-Boost is enabled but the Holesky MEV-Boost package at ${MEVBOOST_URL} is not reachable"
+        curl -X POST -G 'http://my.dappnode/notification-send' --data-urlencode 'type=danger' --data-urlencode title="${MEVBOOST_URL} can not be reached" --data-urlencode 'body=Make sure the Holesky MEV-Boost DNP is available and running'
     fi
 fi
 

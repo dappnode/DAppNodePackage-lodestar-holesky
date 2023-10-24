@@ -5,8 +5,8 @@
   "architectures": ["linux/amd64", "linux/arm64"],
   "upstreamRepo": "ChainSafe/lodestar",
   "upstreamArg": "UPSTREAM_VERSION",
-  "shortDescription": "Lodestar Prater Beacon chain + validator",
-  "description": "Lodestar Prater is an open-source Ethereum Consensus Client on the Goerli/Prater Testnet written in Typescript; maintained by ChainSafe Systems",
+  "shortDescription": "Lodestar Holesky Beacon chain + validator",
+  "description": "Lodestar Holesky is an open-source Ethereum Consensus Client on the Goerli/Holesky Testnet written in Typescript; maintained by ChainSafe Systems",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
@@ -16,10 +16,10 @@
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Prater.git"
+    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Holesky.git"
   },
   "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Prater/issues"
+    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Holesky/issues"
   },
   "links": {
     "ui": "http://brain.web3signer-prater.dappnode/",
@@ -37,15 +37,15 @@
     "portNumber": 3500
   },
   "warnings": {
-    "onRemove": "Make sure your Göerli/Prater StakersUI does not have Lodestar Prater selected as your Consensus Layer Client or you will stop validating!"
+    "onRemove": "Make sure your Göerli/Holesky StakersUI does not have Lodestar Holesky selected as your Consensus Layer Client or you will stop validating!"
   },
   "globalEnvs": [
     {
-      "envs": ["EXECUTION_CLIENT_PRATER", "MEVBOOST_PRATER"],
+      "envs": ["EXECUTION_CLIENT_HOLESKY", "MEVBOOST_HOLESKY"],
       "services": ["beacon-chain"]
     },
     {
-      "envs": ["MEVBOOST_PRATER"],
+      "envs": ["MEVBOOST_HOLESKY"],
       "services": ["validator"]
     }
   ]
