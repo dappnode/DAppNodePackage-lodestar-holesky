@@ -20,7 +20,7 @@ services:
       P2P_PORT: 9612
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
-      MEMORY_LIMIT: 4096
+      MEMORY_LIMIT: 8192
   validator:
     build:
       context: validator
