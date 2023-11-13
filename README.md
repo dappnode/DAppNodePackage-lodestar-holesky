@@ -1,4 +1,4 @@
-# DAppNodePackage Lodestar Holesky
+# Dappnode Package Lodestar Holesky
 
 **Lodestar Holesky Ethereum Consensus Layer Client**
 
