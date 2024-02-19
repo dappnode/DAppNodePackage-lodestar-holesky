@@ -1,16 +1,16 @@
 [
   {
     "labels": {
-      "package": "lodestar-prater.dnp.dappnode.eth",
-      "service": "beacon-chain.lodestar-prater.dappnode"
+      "package": "lodestar-holesky.dnp.dappnode.eth",
+      "service": "beacon-chain.lodestar-holesky.dappnode"
     },
-    "targets": ["beacon-chain.lodestar-prater.dappnode:8008"]
+    "targets": ["beacon-chain.lodestar-holesky.dappnode:8008"]
   },
   {
     "labels": {
-      "package": "lodestar-prater.dnp.dappnode.eth",
-      "service": "validator.lodestar-prater.dappnode"
+      "package": "lodestar-holesky.dnp.dappnode.eth",
+      "service": "validator.lodestar-holesky.dappnode"
     },
-    "targets": ["validator.lodestar-prater.dappnode:5064"]
+    "targets": ["validator.lodestar-holesky.dappnode:5064"]
   }
 ]
