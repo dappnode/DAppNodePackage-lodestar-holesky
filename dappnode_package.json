@@ -37,7 +37,7 @@
     "portNumber": 3500
   },
   "warnings": {
-    "onRemove": "Make sure your Göerli/Holesky StakersUI does not have Lodestar Holesky selected as your Consensus Layer Client or you will stop validating!"
+    "onRemove": "Make sure your Holesky StakersUI does not have Lodestar Holesky selected as your Consensus Layer Client or you will stop validating!"
   },
   "globalEnvs": [
     {
