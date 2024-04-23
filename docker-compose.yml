@@ -4,15 +4,15 @@ services:
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v1.17.0
+        UPSTREAM_VERSION: v1.18.0
     volumes:
-      - "beacon-data:/var/lib/data"
+      - beacon-data:/var/lib/data
     ports:
-      - "9612:9612/tcp"
-      - "9612:9612/udp"
+      - 9612:9612/tcp
+      - 9612:9612/udp
     restart: unless-stopped
     security_opt:
-      - "seccomp:unconfined"
+      - seccomp:unconfined
     environment:
       DEBUG_LEVEL: info
       BEACON_API_PORT: 3500
@@ -25,16 +25,16 @@ services:
     build:
       context: validator
       args:
-        UPSTREAM_VERSION: v1.17.0
+        UPSTREAM_VERSION: v1.18.0
     volumes:
-      - "validator-data:/var/lib/data"
+      - validator-data:/var/lib/data
     restart: unless-stopped
     security_opt:
-      - "seccomp:unconfined"
+      - seccomp:unconfined
     environment:
       DEBUG_LEVEL: info
-      HTTP_WEB3SIGNER: "http://web3signer.web3signer-holesky.dappnode:9000"
-      BEACON_NODE_ADDR: "http://beacon-chain.lodestar-holesky.dappnode:3500"
+      HTTP_WEB3SIGNER: http://web3signer.web3signer-holesky.dappnode:9000
+      BEACON_NODE_ADDR: http://beacon-chain.lodestar-holesky.dappnode:3500
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
