@@ -38,7 +38,7 @@ services:
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
-      DOPPELGANGER_PROTECTION: "false"
+      DOPPELGANGER_PROTECTION: "true"
 volumes:
   beacon-data: {}
   validator-data: {}
