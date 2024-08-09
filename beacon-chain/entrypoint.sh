@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Concatenate EXTRA_OPTS string
-[[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
+[ -n "$CHECKPOINT_SYNC_URL" ] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
 
 case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
 "holesky-geth.dnp.dappnode.eth")
