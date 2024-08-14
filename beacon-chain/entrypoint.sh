@@ -23,7 +23,7 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
 esac
 
 # MEV-Boost: https://chainsafe.github.io/lodestar/beacon-management/mev-and-builder-integration/
-if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" == "true" ]; then
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" = "true" ]; then
     echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost-holesky.dappnode:18550"
     if curl --retry 5 --retry-delay 5 --retry-all-errors "${MEVBOOST_URL}"; then
